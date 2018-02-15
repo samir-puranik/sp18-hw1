@@ -7,10 +7,9 @@ end
 def sort_array_plus_one(a)
   # Q2 CODE HERE
   a = a.sort
-	a.map! do |element|
+	a.map do |element|
 		element + 1
 	end
-  return a
 end
 
 
@@ -56,4 +55,10 @@ def scrabble(word)
     z: 10,
   }
   # Q5 CODE HERE
+  sum = 0
+  word.each_char do |letter|
+    sum += values[letter.to_sym]
+  end
+  return sum
+
 end
